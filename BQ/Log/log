@@ -1,0 +1,25 @@
+Log: Timestamp: 2026-08-29 01:07:33 UTC
+Job ID: bq-job-7128ad
+Project: acme-prod
+Dataset: finance
+Job: monthly-revenue-report
+Platform: BigQuery
+Environment: Production
+Status: FAILED
+Duration: 6 seconds
+
+Error:
+Syntax error: Expected keyword FROM but got keyword GROUP.
+
+Query:
+
+SELECT
+    customer_id,
+    SUM(revenue) AS total_revenue
+GROUP BY customer_id;
+
+Reason:
+invalidQuery
+
+Severity:
+MEDIUM
